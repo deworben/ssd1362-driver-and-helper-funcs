@@ -44,20 +44,20 @@ def my_flatten(big_out_arr):
   
 ############ Script params, please feel free to edit
 # Default params for swoop logo
-new_size = (25, 35)  
-graphic_file = 'swoop_logo.png'
-show_img = False # Show what the final image will look like
-write_to_file = True
-invert_colour_selection = False
-array_name = "swoop_logo"
-
-# Default params for battery
-# new_size = (50, 30)  
-# graphic_file = 'battery-full.png'
+# new_size = (25, 35)  
+# graphic_file = 'swoop_logo.png'
 # show_img = False # Show what the final image will look like
 # write_to_file = True
-# invert_colour_selection = True
-# array_name = "battery_full"
+# invert_colour_selection = False
+# array_name = "swoop_logo"
+
+# Default params for battery
+new_size = (100, 50)  
+graphic_file = 'battery-full.png'
+show_img = False # Show what the final image will look like
+write_to_file = True
+invert_colour_selection = True
+array_name = "battery_full"
 
 ############ Start of the script
 # read the image file

@@ -38,52 +38,32 @@ void setup()
 
 
   //START: Main display
-  //Top left text
-  OLED_ClearBuf();
-  GUI_DisString_EN(0, 2, "Swoop Aero Kite", &Font12, FONT_BACKGROUND, WHITE);
-  OLED_DisPage(0, 0);
-
-  //Bottom left logo
-  // These starting x, y positions are relative to the page, not the whole screen  
-  print_custom_bitmap(10, 20, swoop_logo, 25, 35); 
-
-  // Top right Battery graphic
-  print_custom_bitmap(65, 5, battery_full, 50, 30); 
-
-  // //Bottom right battery %age
-  OLED_ClearBuf();
-  GUI_DisString_EN(0, 2, "     92% full", &Font12, FONT_BACKGROUND, WHITE);
-  OLED_DisPage(3, 3);
-  //END: Main display
-
-
-
-
-  // GUI_Show();
-  // GUI_DrawLine(0, 8, sOLED_DIS.OLED_Dis_Column - 1, 8, WHITE, LINE_SOLID , DOT_PIXEL_DFT);
-  // OLED_DisPage(0, 0);
-  // OLED_DisPage(0, 7);
+  // //Top left text
   // OLED_ClearBuf();
-  //
-//  GUI_DisString_EN(33, 2, "WAVESHARE", &Font12, FONT_BACKGROUND, WHITE);
-//  OLED_DisPage(0, 1);
-//  OLED_ClearBuf();
-//
+  // GUI_DisString_EN(0, 2, "Swoop Aero Kite", &Font12, FONT_BACKGROUND, WHITE);
+  // OLED_DisPage(0, 0);
+
+  // //Bottom left logo
+  // // These starting x, y positions are relative to the page, not the whole screen  
+  // print_custom_bitmap(10, 20, swoop_logo, 25, 35); 
+
+  // // Top right Battery graphic
+  // print_custom_bitmap(65, 5, battery_full, 50, 30); 
+
+  // // //Bottom right battery %age
+  // OLED_ClearBuf();
+  // GUI_DisString_EN(0, 2, "     92% full", &Font12, FONT_BACKGROUND, WHITE);
+  // OLED_DisPage(3, 3);
+  // //END: Main display
+
+  print_custom_bitmap(10, 5, battery_full, 100, 50); 
+
+
+
 //  GUI_DisString_EN(30, 2, "ELECTRONIC", &Font12, FONT_BACKGROUND, WHITE);
 //  OLED_DisPage(0, 2);
 //  OLED_ClearBuf();
-//
-//  GUI_Disbitmap(0  , 2, Signal816  , 16, 8);
-//  GUI_Disbitmap(24 , 8, Bluetooth88, 8 , 8);
-//  GUI_Disbitmap(40 , 2, Msg816     , 16, 8);
-//  GUI_Disbitmap(64 , 2, GPRS88     , 8 , 8);
-//  GUI_Disbitmap(90 , 2, Alarm88    , 8 , 8);
-//  GUI_Disbitmap(112, 2, Bat816     , 16, 8);
-//  OLED_Display(0, 52, 128, 52 + 16);
-//  OLED_ClearBuf();
-//
-//  GUI_DisString_EN(0 , 0, "MUSIC", &Font12, FONT_BACKGROUND, WHITE);
-//  GUI_DisString_EN(48, 0, "MENU" , &Font12, FONT_BACKGROUND, WHITE);
+
 //  GUI_DisString_EN(90, 0, "PHONE", &Font12, FONT_BACKGROUND, WHITE);
 //  OLED_Display(0, 96, 128, 96 + 16);
   // OLED_ClearBuf();
@@ -122,23 +102,23 @@ void loop()
 
   //START: Main display
   //Top left text
-  OLED_ClearBuf();
-  GUI_DisString_EN(0, 2, "Swoop Aero Kite", &Font12, FONT_BACKGROUND, WHITE);
-  OLED_DisPage(0, 0);
+  // OLED_ClearBuf();
+  // GUI_DisString_EN(0, 2, "Swoop Aero Kite", &Font12, FONT_BACKGROUND, WHITE);
+  // OLED_DisPage(0, 0);
 
   //Bottom left logo
   // These starting x, y positions are relative to the page, not the whole screen  
-  print_custom_bitmap((int)(i/5), 20, swoop_logo, 25, 35); 
+  // print_custom_bitmap((int)(i/5), 20, swoop_logo, 25, 35); 
 
   // Top right Battery graphic
-  print_custom_bitmap(65, 5, battery_full, 50, 30); 
+  // print_custom_bitmap(5, 5, battery_full, 100, 50); <--------- here
 
   // //Bottom right battery %age
-  OLED_ClearBuf();
-  GUI_DisString_EN(0, 2, "   92% full", &Font12, FONT_BACKGROUND, WHITE);
-  OLED_DisPage(3, 3);
-  //END: Main display
+  // OLED_ClearBuf();
+  // GUI_DisString_EN(0, 2, "   92% full", &Font12, FONT_BACKGROUND, WHITE);
+  // OLED_DisPage(3, 3);
   i = i+1;
+  //END: Main display
 }
 
 /*********************************************************************************************************
