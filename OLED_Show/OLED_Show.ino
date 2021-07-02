@@ -31,13 +31,11 @@ void setup()
   OLED_Init( OLED_ScanDir ); // set the left to right direction through registers
 
 
-  // Testing
+  // Screen setup
   OLED_ClearScreen(OLED_BACKGROUND);
   OLED_ClearBuf();
-  Serial.println("OLED_Display");
 
-
-  //START: Main display
+  //START: Main display prototype 1
   // //Top left text
   // OLED_ClearBuf();
   // GUI_DisString_EN(0, 2, "Swoop Aero Kite", &Font12, FONT_BACKGROUND, WHITE);
@@ -54,19 +52,18 @@ void setup()
   // OLED_ClearBuf();
   // GUI_DisString_EN(0, 2, "     92% full", &Font12, FONT_BACKGROUND, WHITE);
   // OLED_DisPage(3, 3);
+  // Reference -> GUI_DisString_EN(90, 0, "PHONE", &Font12, FONT_BACKGROUND, WHITE);
+  // Reference -> OLED_Display(0, 96, 128, 96 + 16);
   // //END: Main display
 
+
+
+  // START: One display icon
   print_custom_bitmap(10, 5, battery_full, 100, 50); 
+  // END: One display icon
 
 
 
-//  GUI_DisString_EN(30, 2, "ELECTRONIC", &Font12, FONT_BACKGROUND, WHITE);
-//  OLED_DisPage(0, 2);
-//  OLED_ClearBuf();
-
-//  GUI_DisString_EN(90, 0, "PHONE", &Font12, FONT_BACKGROUND, WHITE);
-//  OLED_Display(0, 96, 128, 96 + 16);
-  // OLED_ClearBuf();
 }
 
 void loop()
@@ -117,7 +114,7 @@ void loop()
   // OLED_ClearBuf();
   // GUI_DisString_EN(0, 2, "   92% full", &Font12, FONT_BACKGROUND, WHITE);
   // OLED_DisPage(3, 3);
-  i = i+1;
+  // i = i+1;
   //END: Main display
 }
 

@@ -376,24 +376,10 @@ void OLED_Display(POINT Xstart, POINT Ystart, POINT Xend, POINT Yend)
   OLED_SetWindow(Xstart, Ystart, Xend, Yend);
 #if USE_INT_RAM
   COLOR *pBuf = (COLOR *)Buffer;
-
-  // START My additions ///////////////////////
-  // pBuf[OLED_BUFSIZ-1] = 0x05;
-  // END My additions ///////////////////////
-
+  
   //write data
   for (page = 0; page < BUFSIZ / (sOLED_DIS.OLED_Dis_Column / 2); page++) {
     for (Column = 0; Column < sOLED_DIS.OLED_Dis_Column / 2; Column++ ) {
-      // OLED_WriteData(0x05);
-      // *pBuf = 0x05;
-      // if (page==((BUFSIZ / (sOLED_DIS.OLED_Dis_Column / 2))-1) && Column==((sOLED_DIS.OLED_Dis_Column / 2) - 1)) //on the final iter
-      // {
-      //   Serial.print("Goteem setting to 0x00");
-      //   *pBuf = 0x00;
-      // }
-
-      // Serial.print(*pBuf);
-      // Serial.print(", ");
       OLED_WriteData(*pBuf);
       pBuf++;
     }
